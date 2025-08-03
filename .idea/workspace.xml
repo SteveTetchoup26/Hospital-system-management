@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fbe3933-18a9-45d1-bba7-79405aafb87d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4fbe3933-18a9-45d1-bba7-79405aafb87d" name="Changes" comment="Add FXML files for patient management forms and UI components">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {}
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -91,6 +94,7 @@
     "Gradle.HospitalManagement [:com.st.hospitalmanagement.Main.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -126,6 +130,31 @@
       <option name="presentableId" value="Default" />
       <updated>1753360509343</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add compiler and vcs xml file">
+      <option name="closed" value="true" />
+      <created>1754186635126</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754186635126</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add initial project files and configuration for Hospital Management System">
+      <option name="closed" value="true" />
+      <created>1754186809686</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754186809686</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add FXML files for patient management forms and UI components">
+      <option name="closed" value="true" />
+      <created>1754186879726</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754186879726</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +167,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add compiler and vcs xml file" />
+    <MESSAGE value="Add initial project files and configuration for Hospital Management System" />
+    <MESSAGE value="Add FXML files for patient management forms and UI components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add FXML files for patient management forms and UI components" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
