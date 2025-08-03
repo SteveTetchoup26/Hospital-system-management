@@ -5,8 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fbe3933-18a9-45d1-bba7-79405aafb87d" name="Changes" comment="Add FXML files for patient management forms and UI components">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin_directory/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/directory/dd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/AdminMainFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/CheckoutPatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorCardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorMainFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditAppointmentFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditDoctorFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditPatientFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientMainFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/RecordPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/AlertMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/AppointmentData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/DoctorData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/PatientsData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/MainFormDesing.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/pageDesign.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/AdminMainForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/CheckoutPatient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorCard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorMainForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditAppointmentForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditDoctorForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditPatientForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/PatientMainForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/RecordPageForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/doctor-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/main-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/patient-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/patient_directory/55520.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +92,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {}
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -74,12 +120,12 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/SteveTetchoup26/Hospital-system-management.git",
-    "accountId": "1f937e55-3f24-4491-b7eb-98b18563770a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SteveTetchoup26/Hospital-system-management.git&quot;,
+    &quot;accountId&quot;: &quot;1f937e55-3f24-4491-b7eb-98b18563770a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -95,7 +141,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33563218",

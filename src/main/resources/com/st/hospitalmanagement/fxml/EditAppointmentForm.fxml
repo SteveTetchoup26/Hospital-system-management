@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st.hospitalmanagement.controllers.EditAppointmentFormController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="425.0" prefWidth="623.0" stylesheets="@../css/MainFormDesing.css">
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="radius" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+               <children>
+                  <Label layoutX="8.0" layoutY="14.0" styleClass="header-1" stylesheets="@../css/MainFormDesing.css" text="Appointment's Information">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="5.0" layoutY="79.0" prefHeight="18.0" prefWidth="90.0" text="Appointment ID:" />
+                  <TextField fx:id="editAppointment_appID" layoutX="103.0" layoutY="76.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="55.0" layoutY="114.0" prefHeight="18.0" prefWidth="38.0" text="Name:" />
+                  <TextField fx:id="editAppointment_name" layoutX="103.0" layoutY="110.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="53.0" layoutY="146.0" prefHeight="18.0" prefWidth="48.0" text="Gender:" />
+                  <ComboBox fx:id="editAppointment_gender" layoutX="103.0" layoutY="143.0" prefWidth="150.0" promptText="Choose...." styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="14.0" layoutY="189.0" prefHeight="18.0" prefWidth="90.0" text="Mobile Number: " />
+                  <TextField fx:id="editAppointment_number" layoutX="106.0" layoutY="187.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="375.0" layoutY="226.0" prefHeight="18.0" prefWidth="48.0" text="Doctor:" />
+                  <ComboBox fx:id="editAppointment_doctor" layoutX="431.0" layoutY="221.0" onAction="#doctorList" prefWidth="150.0" promptText="Choose..." styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="47.0" layoutY="233.0" prefHeight="18.0" prefWidth="48.0" text="Address:" />
+                  <TextArea fx:id="editAppointment_address" layoutX="103.0" layoutY="228.0" prefHeight="44.0" prefWidth="150.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Button fx:id="editAppointment_editBtn" layoutX="253.0" layoutY="368.0" mnemonicParsing="false" onAction="#editBtn" prefHeight="30.0" prefWidth="79.0" styleClass="btn-1" stylesheets="@../css/pageDesign.css" text="Edit" />
+                  <Button fx:id="editAppointment_cancelBtn" layoutX="352.0" layoutY="368.0" mnemonicParsing="false" onAction="#cancelBtn" prefHeight="30.0" prefWidth="79.0" styleClass="btn-1" stylesheets="@../css/pageDesign.css" text="Cancel" />
+                  <Label layoutX="357.0" layoutY="71.0" prefHeight="18.0" prefWidth="70.0" text="Description: " />
+                  <TextArea fx:id="editAppointment_description" layoutX="435.0" layoutY="66.0" prefHeight="44.0" prefWidth="179.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="370.0" layoutY="126.0" prefHeight="18.0" prefWidth="57.0" text="Diagnosis:" />
+                  <Label layoutX="370.0" layoutY="183.0" prefHeight="18.0" prefWidth="57.0" text="Treatment:" />
+                  <TextField fx:id="editAppointment_diagnosis" layoutX="435.0" layoutY="131.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <TextField fx:id="editAppointment_treatment" layoutX="435.0" layoutY="186.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="353.0" layoutY="265.0" prefHeight="18.0" prefWidth="70.0" text="Specialized:" />
+                  <ComboBox fx:id="editAppointment_specialized" layoutX="431.0" layoutY="260.0" prefWidth="150.0" promptText="Choose..." styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <Label layoutX="385.0" layoutY="303.0" prefHeight="18.0" prefWidth="38.0" text="Status:" />
+                  <ComboBox fx:id="editAppointment_status" layoutX="431.0" layoutY="298.0" prefWidth="150.0" promptText="Choose..." styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
