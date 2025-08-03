@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st.hospitalmanagement.controllers.DoctorCardController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../css/MainFormDesing.css">
+         <children>
+            <Circle fx:id="doctor_circleImage" fill="#2a2b2c" radius="52.0" stroke="BLACK" strokeType="INSIDE">
+               <VBox.margin>
+                  <Insets left="95.0" top="20.0" />
+               </VBox.margin>
+            </Circle>
+            <HBox prefHeight="25.0" prefWidth="280.0">
+               <children>
+                  <Label text="Doctor ID: ">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="doctor_doctorID" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="184.0" text="Label" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="144.0" prefHeight="25.0" prefWidth="280.0">
+               <children>
+                  <Label text="Full Name;">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="doctor_fullName" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="184.0" text="Label" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="169.0" prefHeight="25.0" prefWidth="280.0">
+               <children>
+                  <Label text="Specialization:">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="doctor_specialization" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="184.0" text="Label" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="194.0" prefHeight="25.0" prefWidth="280.0">
+               <children>
+                  <Label text="Email Address:">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="doctor_email" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="166.0" text="Label" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="radius" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </VBox>
+   </children>
+</StackPane>
