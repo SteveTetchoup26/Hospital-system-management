@@ -80,7 +80,6 @@ public class EditAppointmentFormController implements Initializable {
             }
 
             editAppointment_doctor.setItems(listD);
-            appointmentSpecializedList();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -103,19 +102,32 @@ public class EditAppointmentFormController implements Initializable {
 
     public void appointmentSpecializedList() {
 
-        String sql  = "SELECT * FROM doctor WHERE date_delete IS NULL AND doctor_id = " + editAppointment_doctor.getSelectionModel().getSelectedItem() + "'";
+        String doctorID = editAppointment_doctor.getSelectionModel().getSelectedItem();
+
+        if (doctorID == null) {
+            return;
+        }
+
+        String sql  = "SELECT specialized FROM doctor WHERE date_delete IS NULL AND doctor_id = ?";
 
         ObservableList<String> listS = FXCollections.observableArrayList();
 
         try (Connection connection = Database.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
-            if (resultSet.next()) {
-                listS.add(resultSet.getString("specialized"));
+            preparedStatement.setString(1, doctorID);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next() && resultSet.getString("specialized") != null) {
+                    listS.add(resultSet.getString("specialized"));
+                }
             }
 
-            editAppointment_doctor.setItems(listS);
+            editAppointment_specialized.setItems(listS);
+
+            if (!listS.isEmpty()) {
+                editAppointment_specialized.getSelectionModel().selectFirst();
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -157,10 +169,10 @@ public class EditAppointmentFormController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        setFields();
         appointmentStatusList();
         appointmentGenderList();
         doctorList();
+        setFields();
 
 
     }

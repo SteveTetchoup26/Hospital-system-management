@@ -1,63 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="HospitalManagement.main:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fbe3933-18a9-45d1-bba7-79405aafb87d" name="Changes" comment="Add FXML files for patient management forms and UI components">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin_directory/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/directory/dd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/AdminMainFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/CheckoutPatientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorMainFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditAppointmentFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditDoctorFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditPatientFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientMainFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/RecordPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/AlertMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/AppointmentData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/DoctorData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/PatientsData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/MainFormDesing.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/pageDesign.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/AdminMainForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/CheckoutPatient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorCard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorMainForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditAppointmentForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditDoctorForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditPatientForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/PatientMainForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/RecordPageForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/doctor-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/main-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/patient-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/patient_directory/55520.png" afterDir="false" />
+    <list default="true" id="4fbe3933-18a9-45d1-bba7-79405aafb87d" name="Changes" comment="Add initial implementation of Hospital Management System with core models, controllers, and UI components">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logo.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HospitalManagement.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_gluonhq_charm_glisten_6_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_3_21_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mysql_mysql_connector_j_8_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_10_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_base_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_base_linux_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_base_win_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_controls_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_controls_linux_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_controls_win_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_fxml_win_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_graphics_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_graphics_linux_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_graphics_win_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_3_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/HospitalManagement.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/HospitalManagement.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/AdminMainFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/CheckoutPatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/CheckoutPatientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/DoctorMainFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/DoctorMainFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/DoctorPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/DoctorPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/EditAppointmentFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/EditAppointmentFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/EditDoctorFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/EditDoctorFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/PatientMainFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/PatientMainFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/PatientPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/controllers/PatientPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/st/hospitalmanagement/database/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/css/MainFormDesing.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/css/MainFormDesing.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/css/pageDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/css/pageDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/AdminMainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/AdminMainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/CheckoutPatient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/CheckoutPatient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/DoctorCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/DoctorCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/DoctorMainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/DoctorMainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/EditAppointmentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/EditAppointmentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/EditDoctorForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/EditDoctorForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/EditPatientForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/EditPatientForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/PatientMainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/PatientMainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/RecordPageForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/RecordPageForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/doctor-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/doctor-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/patient-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/st/hospitalmanagement/fxml/patient-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/AdminMainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/AdminMainFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/CheckoutPatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/CheckoutPatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorMainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorMainFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/DoctorPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditAppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditAppointmentFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditDoctorFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditDoctorFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditPatientFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/EditPatientFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientMainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientMainFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/PatientPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/RecordPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/controllers/RecordPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/AlertMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/AlertMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/AppointmentData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/AppointmentData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/DoctorData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/DoctorData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/PatientsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/PatientsData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/hospitalmanagement/models/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/MainFormDesing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/MainFormDesing.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/pageDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/css/pageDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/AdminMainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/AdminMainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/CheckoutPatient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/CheckoutPatient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorMainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/DoctorMainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditAppointmentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditAppointmentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditDoctorForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditDoctorForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditPatientForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/EditPatientForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/PatientMainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/PatientMainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/RecordPageForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/RecordPageForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/doctor-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/doctor-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/patient-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/st/hospitalmanagement/fxml/patient-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/media/steve-tetchoup/Projets/java/HospitalManagement" value="3LxfplbLCgBxSkX1kaZkpl7mixr" />
+    </persistenceIdMap>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -67,6 +146,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -130,19 +212,34 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="30JzXerFgk418h8zB1WmfxugF7m" />
+  <component name="ProjectSessionTemplates">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Gradle.Build HospitalManagement.executor": "Run",
+    "Gradle.HospitalManagement (Gradle run).executor": "Run",
     "Gradle.HospitalManagement [:com.st.Main.main()].executor": "Run",
     "Gradle.HospitalManagement [:com.st.hospitalmanagement.Main.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging main",
-    "project.structure.last.edited": "Libraries",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/java/HospitalManagement/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33563218",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -150,6 +247,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java\HospitalManagement\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\java\HospitalManagement\src\main\resources\com\st\hospitalmanagement" />
       <recent name="G:\java\HospitalManagement\src\main\resources\com\st\fxml" />
@@ -158,15 +258,21 @@
       <recent name="com.st" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.HospitalManagement (Gradle run)">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.st.hospitalmanagement.Main" />
-      <module name="HospitalManagement.main" />
       <option name="VM_PARAMETERS" value="--module-path &quot;F:\java\coursChallengeUdemy\JavaFX\javafx-sdk-21.0.8\lib;out\production\HospitalManagement&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-ac68fc9d2b05-intellij.indexing.shared.core-IU-263.7307.200" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -200,8 +306,19 @@
       <option name="project" value="LOCAL" />
       <updated>1754186879726</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add initial implementation of Hospital Management System with core models, controllers, and UI components">
+      <option name="closed" value="true" />
+      <created>1754187690290</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1754187690290</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -218,7 +335,8 @@
     <MESSAGE value="Add compiler and vcs xml file" />
     <MESSAGE value="Add initial project files and configuration for Hospital Management System" />
     <MESSAGE value="Add FXML files for patient management forms and UI components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add FXML files for patient management forms and UI components" />
+    <MESSAGE value="Add initial implementation of Hospital Management System with core models, controllers, and UI components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial implementation of Hospital Management System with core models, controllers, and UI components" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

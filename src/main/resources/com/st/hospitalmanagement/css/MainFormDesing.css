@@ -63,3 +63,9 @@
        -fx-text-fill: #fff;
        -fx-font-family: Arial;
 }
+/* Icones Gluon (<Icon>) : la police "Material Icons" est chargee dans Main.java */
+.icon-text {
+    -fx-font-family: "Material Icons";
+    -fx-font-size: 20px;
+    -fx-text-fill: inherit;
+}

@@ -3,6 +3,7 @@ package com.st.hospitalmanagement.controllers;
 import com.st.hospitalmanagement.Main;
 import com.st.hospitalmanagement.database.AlertMessage;
 import com.st.hospitalmanagement.database.Database;
+import com.st.hospitalmanagement.database.ImageStorage;
 import com.st.hospitalmanagement.models.AppointmentData;
 import com.st.hospitalmanagement.models.Data;
 import javafx.application.Platform;
@@ -427,7 +428,7 @@ public class DoctorMainFormController implements Initializable {
         dashboard_col_date.setCellValueFactory(new PropertyValueFactory<>("date"));
         dashboard_col_status.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        dashboard_tableView.setItems(appointmentListData);
+        dashboard_tableView.setItems(dashboardGetData);
 
     }
 
@@ -447,7 +448,7 @@ public class DoctorMainFormController implements Initializable {
         XYChart.Series chart = new XYChart.Series<>();
 
         String sql = "SELECT DATE(date) as day, COUNT(id) FROM patient WHERE doctor = ? " +
-                "GROUP BY day LIMIT 8";
+                "GROUP BY day ORDER BY day LIMIT 8";
 
         try (Connection connection = Database.getConnection();
              PreparedStatement ps = connection.prepareStatement(sql);) {
@@ -475,7 +476,7 @@ public class DoctorMainFormController implements Initializable {
         XYChart.Series chart = new XYChart.Series<>();
 
         String sql = "SELECT DATE(date) as day, COUNT(id) FROM appointment WHERE doctor = ? " +
-                "GROUP BY day LIMIT 7";
+                "GROUP BY day ORDER BY day LIMIT 7";
 
         try (Connection connection = Database.getConnection();
              PreparedStatement ps = connection.prepareStatement(sql);) {
@@ -805,19 +806,24 @@ public class DoctorMainFormController implements Initializable {
 
             alert.errorMessage("Please fill all fields");
         } else {
-            String sqlUpdate = "UPDATE appointment SET name = '"
-                    + appointment_name.getText() + "', gender = '"
-                    + appointment_gender.getSelectionModel().getSelectedItem() + "', description = '"
-                    + appointment_description.getText() + "', mobile_number = '"
-                    + appointment_mobile.getText() + "', address = '"
-                    + appointment_address.getText() + "', status = '"
-                    + appointment_status.getSelectionModel().getSelectedItem() + "', schedule = '"
-                    + appointment_schedule.getValue() + "', date_modify = '"
-                    + new java.sql.Date(new Date().getTime())  + "' WHERE appointment_id = '"
-                    + appointment_appointmentID.getText() + "'";
+            String sqlUpdate = "UPDATE appointment SET name = ?, gender = ?, description = ?, diagnosis = ?, " +
+                    "treatment = ?, mobile_number = ?, address = ?, status = ?, schedule = ?, date_modify = ? " +
+                    "WHERE appointment_id = ?";
 
             try (Connection connection = Database.getConnection();
                  PreparedStatement updateAppointment = connection.prepareStatement(sqlUpdate)) {
+
+                updateAppointment.setString(1, appointment_name.getText());
+                updateAppointment.setString(2, (String) appointment_gender.getSelectionModel().getSelectedItem());
+                updateAppointment.setString(3, appointment_description.getText());
+                updateAppointment.setString(4, appointment_diagnosis.getText());
+                updateAppointment.setString(5, appointment_treatment.getText());
+                updateAppointment.setString(6, appointment_mobile.getText());
+                updateAppointment.setString(7, appointment_address.getText());
+                updateAppointment.setString(8, (String) appointment_status.getSelectionModel().getSelectedItem());
+                updateAppointment.setDate(9, java.sql.Date.valueOf(appointment_schedule.getValue()));
+                updateAppointment.setDate(10, new java.sql.Date(new Date().getTime()));
+                updateAppointment.setString(11, appointment_appointmentID.getText());
 
                 if(alert.confirmationMessage("Are you sure you want to update this appointment?")) {
 
@@ -880,13 +886,7 @@ public class DoctorMainFormController implements Initializable {
                 tempAppID = rs.getInt("MAX(appointment_id)");
             }
 
-            if(tempAppID == 0) {
-                appointmentID += 1;
-            } else {
-               tempAppID += 1;
-            }
-
-            appointmentID = tempAppID;
+            appointmentID = tempAppID + 1;
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -917,14 +917,18 @@ public class DoctorMainFormController implements Initializable {
         appointment_treatment.setText(appData.getTreatment());
         appointment_mobile.setText(appData.getMobileNumber());
         appointment_address.setText(appData.getAddress());
+        appointment_schedule.setValue(appData.getSchedule() == null ? null
+                : new java.sql.Date(appData.getSchedule().getTime()).toLocalDate());
 
     }
 
 
     public void displayAdminIDNumberName() {
 
-        String name = Data.doctor_name;
-        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        String name = Data.doctor_name == null ? "" : Data.doctor_name;
+        if (!name.isEmpty()) {
+            name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        }
 
         nav_username.setText(name);
         nav_doctorID.setText(Data.doctor_id);
@@ -1075,7 +1079,7 @@ public class DoctorMainFormController implements Initializable {
                         fileExtension = ".png";
                     }
 
-                    Path copy = Paths.get("F:\\java\\HospitalManagement\\src\\directory\\" + Data.doctor_id + fileExtension);
+                    Path copy = ImageStorage.resolve("doctor_directory", Data.doctor_id + fileExtension);
 
                     try {
                         Files.copy(transfer, copy, StandardCopyOption.REPLACE_EXISTING);
@@ -1211,7 +1215,7 @@ public class DoctorMainFormController implements Initializable {
 
     public void runTime() {
 
-        new Thread(() -> {
+        Thread clock = new Thread(() -> {
             SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
             while (true) {
                 try {
@@ -1224,7 +1228,9 @@ public class DoctorMainFormController implements Initializable {
                     date_time.setText(format.format(new Date()));
                 });
             }
-        }).start();
+        });
+        clock.setDaemon(true); // ne bloque pas la fermeture de l'application
+        clock.start();
     }
 
     @Override

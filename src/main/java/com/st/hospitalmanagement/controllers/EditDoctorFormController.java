@@ -2,6 +2,7 @@ package com.st.hospitalmanagement.controllers;
 
 import com.st.hospitalmanagement.database.AlertMessage;
 import com.st.hospitalmanagement.database.Database;
+import com.st.hospitalmanagement.database.ImageStorage;
 import com.st.hospitalmanagement.models.Data;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -210,7 +211,7 @@ public class EditDoctorFormController implements Initializable {
                         fileExtension = ".png";
                     }
 
-                    Path copy = Paths.get("F:\\java\\HospitalManagement\\src\\doctor_directory\\" + Data.doctor_id + fileExtension);
+                    Path copy = ImageStorage.resolve("doctor_directory", editDoctor_doctorID.getText() + fileExtension);
 
                     try {
                         Files.copy(transfer, copy, StandardCopyOption.REPLACE_EXISTING);
@@ -221,7 +222,7 @@ public class EditDoctorFormController implements Initializable {
                     }
 
                     ps.setString(9, copy.toAbsolutePath().toString());
-                    ps.setString(10, Data.doctor_id);
+                    ps.setString(10, editDoctor_doctorID.getText());
 
                     try {
                         if(alert.confirmationMessage("Are you sure you want to update this doctor?")) {

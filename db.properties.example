@@ -1,0 +1,7 @@
+# Copier ce fichier vers :
+#   Linux / macOS : ~/.hospitalmanagement/db.properties
+#   Windows       : C:\Users\<vous>\.hospitalmanagement\db.properties
+# puis renseigner vos identifiants MySQL.
+url=jdbc:mysql://localhost:3306/hospital?continueBatchOnError=false
+user=steve
+password=VOTRE_MOT_DE_PASSE

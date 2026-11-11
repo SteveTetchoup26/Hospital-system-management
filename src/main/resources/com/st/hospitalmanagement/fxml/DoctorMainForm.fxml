@@ -67,6 +67,12 @@
                            </font>
                         </Label>
                         <Label fx:id="nav_doctorID" layoutX="76.0" layoutY="91.0" prefHeight="18.0" prefWidth="136.0" stylesheets="@../css/MainFormDesing.css" text="1" textFill="#f2ecec" />
+                        <Label layoutX="12.0" layoutY="119.0" stylesheets="@../css/MainFormDesing.css" text="Username:" textFill="#f4efef">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nav_username" layoutX="73.0" layoutY="119.0" prefHeight="18.0" prefWidth="138.0" stylesheets="@../css/MainFormDesing.css" text="john" textFill="#f4efef" />
                         <Line endX="100.0" layoutX="111.0" layoutY="154.0" startX="-100.0" stroke="#faf6f6" />
                         <Label layoutX="14.0" layoutY="176.0" stylesheets="@../css/MainFormDesing.css" text="Features" textFill="#f4efef" />
                         <Button fx:id="dashboard_btn" layoutX="11.0" layoutY="209.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@../css/MainFormDesing.css" text="Dashboard">

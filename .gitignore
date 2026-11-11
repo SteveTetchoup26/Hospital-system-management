@@ -40,3 +40,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+### Sorties locales ###
+runtime-hospital/
+runtime-hospital-fixed/
+error.log
+*.log
+db.properties

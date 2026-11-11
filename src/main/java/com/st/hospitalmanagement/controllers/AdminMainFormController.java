@@ -3,6 +3,7 @@ package com.st.hospitalmanagement.controllers;
 import com.st.hospitalmanagement.Main;
 import com.st.hospitalmanagement.database.AlertMessage;
 import com.st.hospitalmanagement.database.Database;
+import com.st.hospitalmanagement.database.ImageStorage;
 import com.st.hospitalmanagement.models.AppointmentData;
 import com.st.hospitalmanagement.models.Data;
 import com.st.hospitalmanagement.models.DoctorData;
@@ -448,7 +449,7 @@ public class AdminMainFormController implements Initializable {
         dashboard_chart_PD.getData().clear();
         XYChart.Series chart = new XYChart.Series<>();
 
-        String sql = "SELECT DATE(date) as day, COUNT(id) FROM patient WHERE date_delete IS NULL GROUP BY day LIMIT 7";
+        String sql = "SELECT DATE(date) as day, COUNT(id) FROM patient WHERE date_delete IS NULL GROUP BY day ORDER BY day LIMIT 7";
 
         try (Connection connection = Database.getConnection();
              PreparedStatement ps = connection.prepareStatement(sql);) {
@@ -471,7 +472,7 @@ public class AdminMainFormController implements Initializable {
         dashboard_chart_DD.getData().clear();
         XYChart.Series chart = new XYChart.Series<>();
 
-        String sql = "SELECT DATE(date) as day, COUNT(id) FROM doctor WHERE date_delete IS NULL GROUP BY day LIMIT 7";
+        String sql = "SELECT DATE(date) as day, COUNT(id) FROM doctor WHERE date_delete IS NULL GROUP BY day ORDER BY day LIMIT 7";
 
         try (Connection connection = Database.getConnection();
              PreparedStatement ps = connection.prepareStatement(sql);) {
@@ -1099,6 +1100,11 @@ public class AdminMainFormController implements Initializable {
 
     public void paymentCheckoutBtn() {
 
+        if (Data.temp_patientID == null || Data.temp_date == null || Data.temp_date.isEmpty()) {
+            alert.errorMessage("Please select a patient first");
+            return;
+        }
+
         try{
             Parent root = FXMLLoader.load(Main.class.getResource("fxml/CheckoutPatient.fxml"));
             Stage stage = new Stage();
@@ -1271,7 +1277,7 @@ public class AdminMainFormController implements Initializable {
                         fileExtension = ".png";
                     }
 
-                    Path copy = Paths.get("F:\\java\\HospitalManagement\\src\\admin_directory\\" + Data.admin_id + fileExtension);
+                    Path copy = ImageStorage.resolve("admin_directory", Data.admin_id + fileExtension);
 
                     try {
                         Files.copy(transfer, copy, StandardCopyOption.REPLACE_EXISTING);
@@ -1365,7 +1371,7 @@ public class AdminMainFormController implements Initializable {
 
     public void runTime() {
 
-        new Thread(() -> {
+        Thread clock = new Thread(() -> {
             SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
             while (true) {
                 try {
@@ -1378,7 +1384,9 @@ public class AdminMainFormController implements Initializable {
                     date_time.setText(format.format(new Date()));
                 });
             }
-        }).start();
+        });
+        clock.setDaemon(true); // ne bloque pas la fermeture de l'application
+        clock.start();
     }
 
     @Override

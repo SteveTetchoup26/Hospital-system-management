@@ -282,7 +282,7 @@ public class DoctorPageController implements Initializable {
     @FXML
     public void switchPage() {
 
-        if(login_user.getSelectionModel().getSelectedItem() == "Admin Portal") {
+        if("Admin Portal".equals(login_user.getSelectionModel().getSelectedItem())) {
             try {
                 Parent root = FXMLLoader.load(Main.class.getResource("fxml/main-view.fxml"));
                 Stage stage = new Stage();
@@ -296,7 +296,7 @@ public class DoctorPageController implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        } else if(login_user.getSelectionModel().getSelectedItem() == "Doctor Portal") {
+        } else if("Doctor Portal".equals(login_user.getSelectionModel().getSelectedItem())) {
             try {
                 Parent root = FXMLLoader.load(Main.class.getResource("fxml/doctor-view.fxml"));
                 Stage stage = new Stage();
@@ -310,7 +310,7 @@ public class DoctorPageController implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        } else if(login_user.getSelectionModel().getSelectedItem() == "Patient Portal") {
+        } else if("Patient Portal".equals(login_user.getSelectionModel().getSelectedItem())) {
             try {
                 Parent root = FXMLLoader.load(Main.class.getResource("fxml/patient-view.fxml"));
                 Stage stage = new Stage();

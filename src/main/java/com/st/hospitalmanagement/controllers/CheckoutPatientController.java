@@ -115,12 +115,16 @@ public class CheckoutPatientController implements Initializable {
 
         checkout_patientID.setText(String.valueOf(Data.temp_patientID));
         checkout_name.setText(Data.temp_name);
-        checkout_date.setValue(LocalDate.parse(Data.temp_date));
+        if (Data.temp_date != null && !Data.temp_date.isEmpty()) {
+            checkout_date.setValue(LocalDate.parse(Data.temp_date));
+        }
         checkout_date.setDisable(true);
         checkout_doctor.setText(Data.temp_doctorID);
 
-        image = new Image("File:" + Data.temp_path, 127, 143, false, true);
-        checkout_imageView.setImage(image);
+        if (Data.temp_path != null && !Data.temp_path.isEmpty()) {
+            image = new Image("File:" + Data.temp_path, 127, 143, false, true);
+            checkout_imageView.setImage(image);
+        }
     }
 
     @Override

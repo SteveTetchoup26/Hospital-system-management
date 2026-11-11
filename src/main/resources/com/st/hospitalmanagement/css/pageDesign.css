@@ -27,3 +27,9 @@
 .btn-1:hover {
     -fx-background-color: linear-gradient(to bottom right, #11a7c9, #2765a4);
 }
+/* Icones Gluon (<Icon>) : la police "Material Icons" est chargee dans Main.java */
+.icon-text {
+    -fx-font-family: "Material Icons";
+    -fx-font-size: 20px;
+    -fx-text-fill: inherit;
+}

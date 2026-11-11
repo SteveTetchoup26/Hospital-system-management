@@ -35,7 +35,7 @@
                   <Label layoutX="14.0" layoutY="189.0" prefHeight="18.0" prefWidth="90.0" text="Mobile Number: " />
                   <TextField fx:id="editAppointment_number" layoutX="106.0" layoutY="187.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
                   <Label layoutX="375.0" layoutY="226.0" prefHeight="18.0" prefWidth="48.0" text="Doctor:" />
-                  <ComboBox fx:id="editAppointment_doctor" layoutX="431.0" layoutY="221.0" onAction="#doctorList" prefWidth="150.0" promptText="Choose..." styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
+                  <ComboBox fx:id="editAppointment_doctor" layoutX="431.0" layoutY="221.0" onAction="#appointmentSpecializedList" prefWidth="150.0" promptText="Choose..." styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
                   <Label layoutX="47.0" layoutY="233.0" prefHeight="18.0" prefWidth="48.0" text="Address:" />
                   <TextArea fx:id="editAppointment_address" layoutX="103.0" layoutY="228.0" prefHeight="44.0" prefWidth="150.0" styleClass="textfield-1" stylesheets="@../css/pageDesign.css" />
                   <Button fx:id="editAppointment_editBtn" layoutX="253.0" layoutY="368.0" mnemonicParsing="false" onAction="#editBtn" prefHeight="30.0" prefWidth="79.0" styleClass="btn-1" stylesheets="@../css/pageDesign.css" text="Edit" />

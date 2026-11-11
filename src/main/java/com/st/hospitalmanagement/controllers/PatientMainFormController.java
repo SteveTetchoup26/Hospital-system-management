@@ -3,6 +3,7 @@ package com.st.hospitalmanagement.controllers;
 import com.st.hospitalmanagement.Main;
 import com.st.hospitalmanagement.database.AlertMessage;
 import com.st.hospitalmanagement.database.Database;
+import com.st.hospitalmanagement.database.ImageStorage;
 import com.st.hospitalmanagement.models.AppointmentData;
 import com.st.hospitalmanagement.models.Data;
 import com.st.hospitalmanagement.models.DoctorData;
@@ -535,8 +536,8 @@ public class PatientMainFormController implements Initializable {
                 profile_password.setText(rs.getString("password"));
 
                 String path = rs.getString("image");
-                File file = new File(path);
-                if(file.exists()) {
+                File file = path == null ? null : new File(path);
+                if(file != null && file.exists()) {
                     image = new Image(file.toURI().toString(), 135, 100, false, true);
                     profile_circleImage.setFill(new ImagePattern(image));
                 } else {
@@ -591,7 +592,7 @@ public class PatientMainFormController implements Initializable {
 
         for (DoctorData data : doctorListData) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("fxml/doctorCard.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("fxml/DoctorCard.fxml"));
                 StackPane stackPane = fxmlLoader.load();
 
                 DoctorCardController cardController = fxmlLoader.getController();
@@ -710,7 +711,7 @@ public class PatientMainFormController implements Initializable {
                         fileExtension = ".png";
                     }
 
-                    Path copy = Paths.get("F:\\java\\HospitalManagement\\src\\patient_directory\\" + Data.patient_id + fileExtension);
+                    Path copy = ImageStorage.resolve("patient_directory", Data.patient_id + fileExtension);
 
                     try {
                         Files.copy(transfer, copy, StandardCopyOption.REPLACE_EXISTING);
@@ -787,7 +788,7 @@ public class PatientMainFormController implements Initializable {
 
     public void runTime() {
 
-        new Thread(() -> {
+        Thread clock = new Thread(() -> {
             SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
             while (true) {
                 try {
@@ -800,7 +801,9 @@ public class PatientMainFormController implements Initializable {
                     date_time.setText(format.format(new Date()));
                 });
             }
-        }).start();
+        });
+        clock.setDaemon(true); // ne bloque pas la fermeture de l'application
+        clock.start();
     }
 
     @FXML
