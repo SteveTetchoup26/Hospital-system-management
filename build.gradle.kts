@@ -43,7 +43,11 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     implementation("com.mysql:mysql-connector-j:8.0.33")
-    implementation("com.gluonhq:charm-glisten:6.0.2")
+    // On exclut le JavaFX tiré par Gluon : il impose les jars Linux quel que soit le système,
+    // ce qui casse jlink sous Windows (deux versions de javafx.base). Le plugin JavaFX fournit les bons.
+    implementation("com.gluonhq:charm-glisten:6.0.2") {
+        exclude(group = "org.openjfx")
+    }
     // Requis par le module charm-glisten (sinon le module ne se résout pas au lancement)
     implementation("com.gluonhq.attach:util:4.0.2")
 }
